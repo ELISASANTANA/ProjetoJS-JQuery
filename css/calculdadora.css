@@ -1,0 +1,33 @@
+h1, h2, h3{
+    text-align: center;
+    line-height: 2.1em;
+}
+
+.tabela-servicos{
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    text-align: center;
+}
+
+.categoria, .servicos, .valor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoria ul{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section li {
+    list-style: none;
+    line-height: 2em;
+}
+
+
+
+
+
+
+

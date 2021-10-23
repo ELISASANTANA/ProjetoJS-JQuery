@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/calculdadora.css">
+    <title>Orçamento</title>
+</head>
+
+<body>
+    <header class="header">
+        <div id="logo"><img src="img/logo.jpeg" alt="Imagem da Logo da Empresa"></div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>|
+                <li><a href="#">Orçamento</a></li>|
+                <li><a href="#">Cadastro</a></li>|
+                <li><a href="#">Acompanhamento de despesas</a></li>
+            </ul>
+        </div>
+        <div id="acessivel">
+            <span id="fonteMenor">
+                <a title="Diminuir Fonte" alt="Diminuir">A-</a>
+            </span>
+            <span id="fonteMaior">
+                <a title="Aumentar Fonte" alt="Aumentar">A+</a>
+            </span>
+        </div>
+    </header>
+
+    <main>
+        <h1>Orçamento</h1>
+        <h2>Quer saber o valor do seu pacote?</h2>
+        <h2>Calcule o valor dos serviços que deseja contratar.</h2>
+
+        <div id="titulo">
+            <h3>Tabela de preços</h3>
+        </div>
+
+        <!-- CATEGORIA 1 -->
+        <section class="tabela-servicos">
+            <div class="categoria">
+                <ul>
+                    <li>Residencial</li>
+                </ul>
+            </div>
+
+            <div class="servicos">
+                <ul>Serviço
+                    <li>Flat (diária)</li>
+                    <li>Flat (mensal)</li>
+                    <li>Lavanderia</li>
+                    <li>Diarista</li>
+                    <li>Refeição</li>
+                    <li>Lanche</li>
+                    <li>Enxoval</li>
+                    <li>Serviço de Mercado</li>
+                </ul>
+            </div>
+
+            <div class="valor">
+                <ul>Valor(sessão/un)
+                    <li>R$ 250,00 </li>
+                    <li>R$ 4.500,00</li>
+                    <li>R$ 30,00</li>
+                    <li>R$ 150,00</li>
+                    <li>R$ 25,00</li>
+                    <li>R$ 15,00</li>
+                    <li>R$ 70,00</li>
+                    <li>R$ 30,00</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 2 -->
+        <section class="tabela-servicos">
+            <div class="categoria">
+                <ul>
+                    <li>Saúde</li>
+                </ul>
+            </div>
+
+            <div class="servicos">
+                <ul>
+                    <li>Consulta médica</li>
+                    <li>Consulta enfermeiro</li>
+                    <li>Consulta fisioterapia</li>
+                    <li>Pilates</li>
+                    <li>Acupuntura </li>
+                </ul>
+            </div>
+
+            <div class="valor">
+                <ul>
+                    <li>R$ 180,00</li>
+                    <li>R$ 150,00</li>
+                    <li>R$ 150,00</li>
+                    <li>R$ 100,00</li>
+                    <li>R$ 150,00 </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 3 -->
+
+        <section class="tabela-servicos">
+            <div class="categoria">
+                <ul>
+                    <li>Lazer</li>
+                </ul>
+            </div>
+
+            <div class="servicos">
+                <ul>
+                    <li>Hidroginástica</li>
+                    <li>Yoga</li>
+                    <li>Dança de Salão</li>
+                    <li>Coral</li>
+                    <li>Violão ou teclado </li>
+                </ul>
+            </div>
+
+            <div class="valor">
+                <ul>
+                    <li>R$ 80,00</li>
+                    <li>R$ 80,00</li>
+                    <li>R$ 80,00</li>
+                    <li>R$ 80,00</li>
+                    <li>R$ 80,00</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 4 -->
+
+        <section class="tabela-servicos">
+            <div class="categoria">
+                <ul>
+                    <li>Estético</li>
+                </ul>
+            </div>
+
+            <div class="servicos">
+                <ul>
+                    <li>Corte de cabelo</li>
+                    <li>Sobrancelha </li>
+                    <li>Manicure</li>
+                    <li>Pedicure</li>
+                    <li>Hidratação</li>
+                    <li>Escova</li>
+                    <li>Massagem</li>
+                </ul>
+            </div>
+
+            <div class="valor">
+                <ul>
+                    <li>R$ 40,00</li>
+                    <li>R$ 15,00</li>
+                    <li>R$ 25,00</li>
+                    <li>R$ 25,00</li>
+                    <li>R$ 50,00</li>
+                    <li>R$ 30,00</li>
+                    <li>R$ 60,00</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Para mostrar que você está na melhor idade e apto a viver conosco, vamos te desafiar! Calcule:</h3>
+        </section>
+
+        <p id="p1"></p>
+        <div id="minhaDiv"></div>
+        <section id="calc">
+            <label>Valor 1:</label>
+            <input id="valor1" value="2">
+
+            <label>Valor 2:</label>
+            <input id="valor2">
+
+            <button id="soma">Somar</button>
+            <button id="limpar">Limpar</button>
+
+            <div id="resposta"></div>
+        </section>
+
+    </main>
+
+
+
+    <!-- <footer class="footer">
+        <div id="grid-container">
+
+            <div class="box">
+                <div id="contato"><img src="img/telefone.webp" alt=""></div>
+                <p>33 3333 3333</p>
+            </div>
+
+            <div class="box">
+                <div id="rede-social"><img src="img/instagram.png" alt=""></div>
+                <p>@HOMEGOLDEN</p>
+            </div>
+
+            <div class="box">
+                <div id="email"><img src="img/email2.png" alt=""></div>
+                <p>contato@homegolden.com</p>
+            </div>
+
+            <div class="box">
+                <div class="info">
+                    <div id="endereco"></div>
+                    <p>Rua do Paraiso, 1000 - Joinville - SC</p> <br>
+                    <P>CEP: 14520-51</P>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="info">
+                    <div id="atendimento"></div>
+                    <p>Horário de atendimento</p> <br>
+                    <p>08:30 as 20:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright">&copyGOLDEN HOME</div>
+    </footer> -->
+
+    <script type="text/javascript" src="js/calculadora.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

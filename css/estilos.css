@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+    margin-left: 1em;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto;
+    background-color: #3f3655;
+    border-top: 5px solid #DCCB7B;
+    border-bottom: 5px solid #DCCB7B;
+}
+
+#menu{
+    font-size: 20px;
+    color: #DCCB7B;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;    
+    justify-content: space-around;
+
+}
+
+#menu li a{
+    text-decoration: none;
+    color: #DCCB7B;
+}
+
+#acessivel{
+    color: #DCCB7B;
+    margin-left: auto;
+    padding-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+#acessivel span{
+    margin: 3px;
+}
+
+#fonteMenor, #fonteMaior{
+    border: 1px solid #DCCB7B;
+    border-radius: 3px;
+}
+
+.footer{
+    background-color: #3f3655;
+    border-top: 5px solid #DCCB7B;
+    border-bottom: 5px solid #DCCB7B;
+    width: 100%;
+}   
+
+#grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 1fr;
+    height: 80px;
+}
+
+#contato, #rede-social, #email{
+    margin: auto;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: auto;
+}
+
+.box p{
+    margin: auto;
+    padding-left: 10px;
+    color: #DCCB7B;
+    font-weight: bold;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#copyright{
+    text-align: center;
+    color: #DCCB7B;
+    font-size: 13px;
+}
+
