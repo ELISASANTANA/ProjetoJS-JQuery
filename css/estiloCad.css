@@ -1,0 +1,150 @@
+
+/*******************************Estilização do Formulário**********************************/
+main{ 
+    /*Estilizações do main (fundo), no qual o formulário está inserido*/
+    background: linear-gradient(180deg, #f3eedc 20%, #e0d29c 100%);
+    /* background-size: 100%; */
+    margin: 0;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+input{
+    box-sizing: border-box;
+    outline: none;
+}
+.agrupamento {
+    /*Parâmetro definido para todos os elementos que estão dentro do form*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#cadastro {
+    /*"Caixa branca" para destacar o form (identificado como cadastro)*/
+    margin-top: 25px;
+    position: center;
+    width: 500px;
+    min-height: 400px;
+    background: #fff; /*Se conseguir colocar imagem de fundo usar: rgba(253, 250, 250, 0.6);*/
+    border-radius: 6px;
+    padding: 20px 50px; 
+}
+#cadastro legend {
+    /*Legenda do form (identificado como cadastro)*/
+    color: #DCCB7B;
+    text-shadow: #2E1652 1px 2px 1px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  .input-group {
+    margin: 5px 0;
+  }
+  .input-group label { /*Parâmetros para labels: nome, sobrenome, telefone, etc...*/
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4b421f; 
+    cursor: pointer;
+  }
+  
+  .input-group input:not([type="checkbox"]), .input-group select, .input-group textarea { /*Parâmetros das caixas de resposta (inputs) do formulário*/
+    background: #e7e0bb;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 8px 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .input-group input:focus {
+    border-color: #624378;
+  }
+  
+  .input-group input::placeholder {
+    color: #686868;
+    font-weight: 300;
+  }
+  .colunas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .colunas .input-group {
+    width: 48%;
+  }
+  .botoes {
+    text-align: center;
+  }
+  .botao {
+    background: #e0d29c;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: 2px solid #624378;
+    color: #624378;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .botao:hover {
+    background: #c9b164;
+  }
+
+/********************Estilização da caixa de mensagem do formulário**************************/
+
+p{ /*Define os parâmetros do texto dentro da caixa de mensagem*/
+    font-size: 20px;
+    color:#3f3655;
+    text-align: center;
+    margin-top: 20px;
+}
+fieldset{ /*Define os parâmetros de tamanho da caixa de mensagem*/
+    font-size: 25px;
+    margin-bottom: 15px; 
+}
+fieldset label{ /*Define os parâmetros da margem do texto da caixa de mensagem*/
+    margin-left: 5px;
+    margin-right: 25px;
+}
+#caixaAcesso{ /*Define os parâmetros da caixa de mensagem*/
+    display:none;
+    width: 500px;
+    height: 200px;
+    background-color: #e0d29c;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border:solid 1px #3f3655;
+    border-radius: 5px;
+}
+#login{ /*Define os parâmetros da faixa do título da caixa de mensagem*/
+    width: 500px;
+    height: 50px;
+    background-color: #624378;
+}
+#cabecalhoCaixa{ /*Define os parâmetros do texto do título da caixa de mensagem*/
+    font-size: 25px;
+    text-align: center;
+    color: #eae0bc;
+    margin-top: 0;
+    padding-top: 10px;
+}
+#botaoOk{ /*Define os parâmetros do botão ok*/
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    left: 400px;
+}
+#botaoOk:hover{ /*Dá estilo de sombra ao botão Ok*/
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #eae0bc;
+}
+
+
+@media (max-width: 375px){
+
+  #cadastro{
+    width: 200px;
+  }
+}

@@ -1,23 +1,58 @@
-h1, h2, h3{
+body{
+    /* background: linear-gradient(180deg, #f3eedc 20%, #e0d29c 100%); */
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+h1, h2{
     text-align: center;
     line-height: 2.1em;
 }
 
+h1{
+    color: #DCCB7B;
+    text-shadow: #2E1652 2px 3px 2px;
+    font-size: 50px;
+}
+
 .tabela-servicos{
     display: grid;
-    grid-template-columns: 30% 35% 35%;
+    grid-template-columns: 25% 30% 30%;
+    grid-template-rows: 1fr 40px;
+    background-color: #EAE0BC;
+}
+
+.grid{
+    width: 800px;
     text-align: center;
+    background: linear-gradient(180deg, #f3eedc 20%, #e0d29c 100%);;
+    margin-right: auto;
+    border: 2px solid #624378 ;
+}
+
+.tabela-servicos div span{
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .categoria, .servicos, .valor{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.servicos span, .valor span{
+    line-height: 50px;
+    /* text-decoration: underline 2px #2E1652; */
 }
 
 .categoria ul{
     font-weight: bold;
     font-size: 1.2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* text-decoration: underline 2px #2E1652;
+    color: #DCCB7B; */
+
 }
 
 section li {
@@ -25,9 +60,150 @@ section li {
     line-height: 2em;
 }
 
+.btn{
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    font-family: helvetica;
+    font-size: 25px;
+    border-style: inset;
+    background-color: #FEFEFE;
+    transition-duration: 0.4s;
+    border-color: #FEFEFE;
+}
+  
+.btn:hover {
+    background-color: #DCCB7B; /* Green */
+    color: white;
+    border-style: inset;
+    border-color: #624378;
+    color: #2E1652;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.calcDesign{
+    width: 320px;
+    margin: 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid #624378;
+}
+
+.operador{
+    border-style: inset;
+    background-color: #624378;
+    border-color: #2E1652;
+    color: #DCCB7B;
+}
+
+.sub-conteiner{
+    display: flex;
+    flex-direction: column;
+}
+
+#tela, #input{
+    background-color: #e0dcdc;
+    border: none;
+    height: 70px;
+    border-bottom: 1px solid #2E1652;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 5px;
+    font-size: 30px;
+    font-family: helvetica;
+    font-weight: bold;
+}
+
+.btnCentro{
+    margin-left: 20px;
+    margin-top: 10px 10px;
+}
+
+.container{
+    display: flex;
+    margin: 30px 30px;
+}
+
+#cientificaBorder{
+    display: none;
+}
+
+#trocaCalc, #trocaCalc2{
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #2E1652;
+    color: #DCCB7B;
+    font-size: 15px;
+    border-radius: 20px;    
+
+}
+
+#trocaCalc:hover, #trocaCalc2:hover{
+    background-color: #DCCB7B;
+    color: #2E1652;
+}
+
+h3{
+    color: #DCCB7B;
+    text-shadow: #f8f4ff 1px 1px 1px;
+    font-size: 2em;
+    background-color: #624378;
+    height: 35px;
+    margin-top: auto;
+}
+
+.alinhamento{
+    justify-items: center;
+    margin-left: auto;
+}
+
+.calculadora{
+    margin-left: 50px;
+}
+
+.teste{
+   text-align: center;
+    margin-bottom: 20px;
+}
 
 
+@media (max-width: 375px){
 
+    .container{
+        display: block;
+        margin: 0;
+    }
 
+    .tabela-servicos{
+        display: grid;
+        grid-template-columns: 16% 17% 17%;
+    }
 
+    h1{
+        font-size: 2em;
+    }
 
+    h2{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+    .alinhamento{
+        justify-content: center;
+    }
+
+    #simplesBorder{
+        margin-left: 35px;
+    }
+
+    .titulo h3{
+        text-align: center;
+    }
+}

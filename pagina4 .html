@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto JavaScript</title>
+    <title>Acompanhamento de despesas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/estilos4.css">x'
+    <link rel="stylesheet" href="css/estilos4.css">
 </head>
 <body>
     <header class="header">
@@ -16,9 +16,9 @@
         <div id="menu">
             <ul>
                 <li><a href="#">Home</a></li>|
-                <li><a href="#">Orçamento</a></li>|
-                <li><a href="#">Cadastro</a></li>|
-                <li><a href="#">Acompanhamento de despesas</a></li>
+                <li><a href="calculadora.html">Orçamento</a></li>|
+                <li><a href="Cadastro.html">Cadastro</a></li>|
+                <li><a href="pagina4 .html">Acompanhamento de despesas</a></li>
             </ul>
         </div>
         <div id="acessivel">
@@ -31,12 +31,11 @@
         </div>
     </header>   
     
-    <article id=banner_despesa>
+    <picture id=banner_despesa>
         <div id=banner_pg4>
-            <img id="imagem_tamanho" src="img/BANNEROP2_800.png" alt="Banner sobre finanças">
-
+            <img id="imagem_tamanho" src="img/banner_p4_800.png" alt="Banner sobre finanças">   
         </div>
-    </article>
+    </picture>
     
     <main>
         <section class = "titulo">
@@ -46,12 +45,22 @@
 
         <section class = "card">
             <div class="linhaDeInput">
-                <label>Produto</label>
-                <input type="text" id="nomeProduto" placeholder="Nome do produto"></input>
+                <label>Categoria</label>
+                <select id="nomeProduto" nome="Categoria" type="text">
+                    <option value="">Selecione a Categoria</option>
+                    <option value="Residencial">Residencial</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <!-- <input type="" id="nomeProduto"></input>  -->
+                </select> 
+            </div>
+            <div class="linhaDeInput">
+                <label>Serviço</label>
+                <input type="text" id="tipoServico" placeholder="Tipo de serviço"></input>
             </div>
             <div class="linhaDeInput">
                 <label>Valor</label>
-                <input type="text" id="valorProduto" placeholder="Valor do produto"></input>
+                <input type="text" id="valorProduto" placeholder="Valor do serviço"></input>
             </div>
             <button id="btn1" onclick="produto.salvar()">Salvar</button>
             <button onclick="produto.cancelar()">Cancelar</button>
@@ -60,53 +69,61 @@
             <table border=1>
                 <thead id=fonte_tabela>
                     <th class="center">ID</th>
-                    <th>Produto</th>
-                    <th>Valor</th>
-                    <th>Açoes</th>
+                    <th class="center">Categoria</th>
+                    <th class="center">Serviço</th>
+                    <th class="center">Valor</th>
+                    <th class="center">Açoes</th>
                 </thead>
+                <button onclick="clicar()">Resultado</button>
+                <p class=resultado></p>
                 <tbody id="tbody">
                     
                 </tbody>
             </table>
+            <div>
+                
+            </div>
         </section>
-        <footer class="footer">
-            <div id="grid-container">
+    </main>
     
-                <div class="box">
-                    <div id="contato"><img src="img/telefone.webp" alt=""></div>
+    <footer class="footer">
+        <div id="grid-container">
+    
+            <div class="box">
+                <div id="contato"><img src="img/telefone.webp" alt=""></div>
                     <p>33 3333 3333</p>
-                </div>
+            </div>
     
-                <div class="box">
-                    <div id="rede-social"><img src="img/instagram.png" alt=""></div>
+            <div class="box">
+                    <div id="rede-social"><img src="img/instragram.png" alt=""></div>
                     <p>@HOMEGOLDEN</p>
-                </div>
+            </div>
     
-                <div class="box">
+            <div class="box">
                     <div id="email"><img src="img/email2.png" alt=""></div>
                     <p>contato@homegolden.com</p>
-                </div>
+            </div>
     
-                <div class="box">
+            <div class="box">
                     <div class="info">
                         <div id="endereco"></div>
                         <p>Rua do Paraiso, 1000 - Balneário Camboriú - SC</p> <br>
                         <P>CEP: 14520-51</P>
-                    </div>
-                </div>
-                
-                <div class="box">
-                    <div class="info">
-                        <div id="atendimento"></div>
-                        <p>Horário de atendimento</p> <br>
-                        <p>08:30 as 20:00</p>
-                    </div>
                 </div>
             </div>
+                
+            <div class="box">
+                <div class="info">
+                    <div id="atendimento"></div>
+                    <p>Horário de atendimento</p> <br>
+                    <p>08:30 as 20:00</p>
+                </div>
+            </div>
+        </div>
     
-            <div id="copyright">&copyGOLDEN HOME</div>    
-        </footer>
-    </main>
+        <div id="copyright">&copyGOLDEN HOME</div>    
+    </footer>
+
     <script src="js/scripts4.js"></script>
 </body>
 </html>

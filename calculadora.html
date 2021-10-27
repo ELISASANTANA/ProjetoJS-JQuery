@@ -5,8 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <script type="text/javascript" src="js/calculadora.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" href="js/acessibilidade.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- <script>
+        var $z = jquery.noConflict();
+        $z(document).ready(function () {
+            $z("#fonteMaior").click(function () {
+                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) + 2;
+
+                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+
+            $z("#fonteMenor").click(function () {
+                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) - 2;
+
+                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+        });
+    </script> -->
+
     <link rel="stylesheet" href="css/calculdadora.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Orçamento</title>
 </head>
 
@@ -16,9 +46,9 @@
         <div id="menu">
             <ul>
                 <li><a href="#">Home</a></li>|
-                <li><a href="#">Orçamento</a></li>|
-                <li><a href="#">Cadastro</a></li>|
-                <li><a href="#">Acompanhamento de despesas</a></li>
+                <li><a href="calculadora.html">Orçamento</a></li>|
+                <li><a href="Cadastro.html">Cadastro</a></li>|
+                <li><a href="pagina4 .html">Despesas</a></li>
             </ul>
         </div>
         <div id="acessivel">
@@ -31,167 +61,234 @@
         </div>
     </header>
 
+
     <main>
         <h1>Orçamento</h1>
         <h2>Quer saber o valor do seu pacote?</h2>
         <h2>Calcule o valor dos serviços que deseja contratar.</h2>
-
-        <div id="titulo">
-            <h3>Tabela de preços</h3>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
         </div>
 
+
         <!-- CATEGORIA 1 -->
-        <section class="tabela-servicos">
-            <div class="categoria">
-                <ul>
-                    <li>Residencial</li>
-                </ul>
+        <section class="container">
+            <div class="alinhamento grid">
+                <div class="titulo">
+                    <h3>Tabela de preços</h3>
+                </div>
+                <section class="tabela-servicos">
+                    <div class="categoria">
+                        <ul>
+                            <li>Residencial</li>
+                        </ul>
+                    </div>
+                    <div class="servicos">
+                        <ul><span>Serviço</span>
+                            <li>Flat (diária)</li>
+                            <li>Flat (mensal)</li>
+                            <li>Lavanderia</li>
+                            <li>Diarista</li>
+                            <li>Refeição</li>
+                            <li>Lanche</li>
+                            <li>Enxoval</li>
+                            <li>Serviço de Mercado</li>
+                        </ul>
+                    </div>
+                    <div class="valor">
+                        <ul><span>Valor(sessão/un)</span>
+                            <li>R$ 250,00 </li>
+                            <li>R$ 4.500,00</li>
+                            <li>R$ 30,00</li>
+                            <li>R$ 150,00</li>
+                            <li>R$ 25,00</li>
+                            <li>R$ 15,00</li>
+                            <li>R$ 70,00</li>
+                            <li>R$ 30,00</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- CATEGORIA 2 -->
+                <section class="tabela-servicos">
+                    <div class="categoria">
+                        <ul>
+                            <li>Saúde</li>
+                        </ul>
+                    </div>
+                    <div class="servicos">
+                        <ul>
+                            <li>Consulta médica</li>
+                            <li>Consulta enfermeiro</li>
+                            <li>Consulta fisioterapia</li>
+                            <li>Pilates</li>
+                            <li>Acupuntura </li>
+                        </ul>
+                    </div>
+                    <div class="valor">
+                        <ul>
+                            <li>R$ 180,00</li>
+                            <li>R$ 150,00</li>
+                            <li>R$ 150,00</li>
+                            <li>R$ 100,00</li>
+                            <li>R$ 150,00 </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- CATEGORIA 3 -->
+                <section class="tabela-servicos">
+                    <div class="categoria">
+                        <ul>
+                            <li>Lazer</li>
+                        </ul>
+                    </div>
+                    <div class="servicos">
+                        <ul>
+                            <li>Hidroginástica</li>
+                            <li>Yoga</li>
+                            <li>Dança de Salão</li>
+                            <li>Coral</li>
+                            <li>Violão ou teclado </li>
+                        </ul>
+                    </div>
+                    <div class="valor">
+                        <ul>
+                            <li>R$ 80,00</li>
+                            <li>R$ 80,00</li>
+                            <li>R$ 80,00</li>
+                            <li>R$ 80,00</li>
+                            <li>R$ 80,00</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- CATEGORIA 4 -->
+                <section class="tabela-servicos">
+                    <div class="categoria">
+                        <ul>
+                            <li>Estético</li>
+                        </ul>
+                    </div>
+                    <div class="servicos">
+                        <ul>
+                            <li>Corte de cabelo</li>
+                            <li>Sobrancelha </li>
+                            <li>Manicure</li>
+                            <li>Pedicure</li>
+                            <li>Hidratação</li>
+                            <li>Escova</li>
+                            <li>Massagem</li>
+                        </ul>
+                    </div>
+                    <div class="valor">
+                        <ul>
+                            <li>R$ 40,00</li>
+                            <li>R$ 15,00</li>
+                            <li>R$ 25,00</li>
+                            <li>R$ 25,00</li>
+                            <li>R$ 50,00</li>
+                            <li>R$ 30,00</li>
+                            <li>R$ 60,00</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
+            <!-- CALCULADORA SIMPLES -->
+            <section class="alinhamento">
+                <div class="teste">
+                    <h4>Para mostrar que você está na </h4>
+                    <h4>melhor idade e apto a viver conosco, vamos te desafiar!</h4>
+                    <h4>Com auxilio da calculadora calcule:</h4>
+                    <ul type="1">
+                        <li class="pergunta">Qual a raiz quadrada de 400?</li>
+                        <input type="text"> <input type="button" value="enviar" id="resp1">
+                        <li class="pergunta">Qual o resultado de 54²?</li>
+                        <input type="text"> <input type="button" value="enviar" id="resp2">
+                        <li class="pergunta">Qual o resultado de 18³?</li>
+                        <input type="text"> <input type="button" value="enviar" id="resp3">
+                    </ul>
+                </div>
+                <div class="calculadora">
+                    <button id="trocaCalc">Calculadora Simples</button>
+                    <button id="trocaCalc2">Calculadora Cientifica</button>
+                </div>
+                <div class="calcDesign" id="simplesBorder">
 
-            <div class="servicos">
-                <ul>Serviço
-                    <li>Flat (diária)</li>
-                    <li>Flat (mensal)</li>
-                    <li>Lavanderia</li>
-                    <li>Diarista</li>
-                    <li>Refeição</li>
-                    <li>Lanche</li>
-                    <li>Enxoval</li>
-                    <li>Serviço de Mercado</li>
-                </ul>
-            </div>
-
-            <div class="valor">
-                <ul>Valor(sessão/un)
-                    <li>R$ 250,00 </li>
-                    <li>R$ 4.500,00</li>
-                    <li>R$ 30,00</li>
-                    <li>R$ 150,00</li>
-                    <li>R$ 25,00</li>
-                    <li>R$ 15,00</li>
-                    <li>R$ 70,00</li>
-                    <li>R$ 30,00</li>
-                </ul>
-            </div>
+                    <div id="tela"></div>
+                    <div id="simples">
+                        <div class="btnCentro">
+                            <button id="voltar" class="btn limpar operador">C</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="7" class="btn">7</button>
+                            <button id="8" class="btn">8</button>
+                            <button id="9" class="btn">9</button>
+                            <button id="X" class="btn operador">X</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="4" class="btn">4</button>
+                            <button id="5" class="btn">5</button>
+                            <button id="6" class="btn">6</button>
+                            <button id="subtracao" class="btn operador">-</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="1" class="btn">1</button>
+                            <button id="2" class="btn">2</button>
+                            <button id="3" class="btn">3</button>
+                            <button id="adicao" class="btn operador">+</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="0" class="btn">0</button>
+                            <button id="decimal" class="btn operador">.</button>
+                            <button id="igual" class="btn operador">=</button>
+                            <button id="divide" class="btn operador">/</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- CALCULADORA CIENTIFICA  -->
+                <div class="calcDesign" id="cientificaBorder">
+                    <div id="input"></div>
+                    <div id="cientifica">
+                        <div class="btnCentro">
+                            <button id="raiz" class="btn operador">x^0.5</button>
+                            <button id="quadrado" class="btn operador" value="2">x^2</button>
+                            <button id="cubo" class="btn operador">x^3</button>
+                            <button id="voltar" class="btn limpar operador">C</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="sete" class="btn">7</button>
+                            <button id="oito" class="btn">8</button>
+                            <button id="nove" class="btn">9</button>
+                            <button id="multiplicacao" class="btn operador">X</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="quatro" class="btn">4</button>
+                            <button id="cinco" class="btn">5</button>
+                            <button id="seis" class="btn">6</button>
+                            <button id="menos" class="btn operador">-</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="um" class="btn">1</button>
+                            <button id="dois" class="btn">2</button>
+                            <button id="tres" class="btn">3</button>
+                            <button id="mais" class="btn operador">+</button>
+                        </div>
+                        <div class="btnCentro">
+                            <button id="zero" class="btn">0</button>
+                            <button id="dec" class="btn">.</button>
+                            <button id="resultado" class="btn operador">=</button>
+                            <button id="divisao" class="btn operador">/</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
-        <!-- CATEGORIA 2 -->
-        <section class="tabela-servicos">
-            <div class="categoria">
-                <ul>
-                    <li>Saúde</li>
-                </ul>
-            </div>
-
-            <div class="servicos">
-                <ul>
-                    <li>Consulta médica</li>
-                    <li>Consulta enfermeiro</li>
-                    <li>Consulta fisioterapia</li>
-                    <li>Pilates</li>
-                    <li>Acupuntura </li>
-                </ul>
-            </div>
-
-            <div class="valor">
-                <ul>
-                    <li>R$ 180,00</li>
-                    <li>R$ 150,00</li>
-                    <li>R$ 150,00</li>
-                    <li>R$ 100,00</li>
-                    <li>R$ 150,00 </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- CATEGORIA 3 -->
-
-        <section class="tabela-servicos">
-            <div class="categoria">
-                <ul>
-                    <li>Lazer</li>
-                </ul>
-            </div>
-
-            <div class="servicos">
-                <ul>
-                    <li>Hidroginástica</li>
-                    <li>Yoga</li>
-                    <li>Dança de Salão</li>
-                    <li>Coral</li>
-                    <li>Violão ou teclado </li>
-                </ul>
-            </div>
-
-            <div class="valor">
-                <ul>
-                    <li>R$ 80,00</li>
-                    <li>R$ 80,00</li>
-                    <li>R$ 80,00</li>
-                    <li>R$ 80,00</li>
-                    <li>R$ 80,00</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- CATEGORIA 4 -->
-
-        <section class="tabela-servicos">
-            <div class="categoria">
-                <ul>
-                    <li>Estético</li>
-                </ul>
-            </div>
-
-            <div class="servicos">
-                <ul>
-                    <li>Corte de cabelo</li>
-                    <li>Sobrancelha </li>
-                    <li>Manicure</li>
-                    <li>Pedicure</li>
-                    <li>Hidratação</li>
-                    <li>Escova</li>
-                    <li>Massagem</li>
-                </ul>
-            </div>
-
-            <div class="valor">
-                <ul>
-                    <li>R$ 40,00</li>
-                    <li>R$ 15,00</li>
-                    <li>R$ 25,00</li>
-                    <li>R$ 25,00</li>
-                    <li>R$ 50,00</li>
-                    <li>R$ 30,00</li>
-                    <li>R$ 60,00</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h3>Para mostrar que você está na melhor idade e apto a viver conosco, vamos te desafiar! Calcule:</h3>
-        </section>
-
-        <p id="p1"></p>
-        <div id="minhaDiv"></div>
-        <section id="calc">
-            <label>Valor 1:</label>
-            <input id="valor1" value="2">
-
-            <label>Valor 2:</label>
-            <input id="valor2">
-
-            <button id="soma">Somar</button>
-            <button id="limpar">Limpar</button>
-
-            <div id="resposta"></div>
-        </section>
 
     </main>
 
-
-
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div id="grid-container">
 
             <div class="box">
@@ -200,7 +297,7 @@
             </div>
 
             <div class="box">
-                <div id="rede-social"><img src="img/instagram.png" alt=""></div>
+                <div id="rede-social"><img src="img/instragram.png" alt=""></div>
                 <p>@HOMEGOLDEN</p>
             </div>
 
@@ -227,10 +324,9 @@
         </div>
 
         <div id="copyright">&copyGOLDEN HOME</div>
-    </footer> -->
+    </footer>
 
     <script type="text/javascript" src="js/calculadora.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

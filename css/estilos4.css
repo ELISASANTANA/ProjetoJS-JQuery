@@ -1,19 +1,10 @@
-* {
-    margin:0;
-    padding: 0;
-}
-
-/* Estilização da parte prncipal do site */
+/* Estilização da parte principal da página 4 */
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     background-color: #fefefe;
     color: #624378;
 }
-/* header{
-    background-color: blueviolet;
-    text-align: center;
-    color:cornsilk;
-} */
+
 main{
     padding: 30px 50px;
 }
@@ -24,6 +15,13 @@ main{
     padding: 20px;
     margin-top: 15px;
     border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #DCCB7B;
+    border-radius: 5px;
+    outline: 0;
 }
 
 .linhaDeInput{
@@ -50,7 +48,8 @@ button{
 }
 
 button:hover{
-    background-color: rgb(90, 28, 148);
+    background-color: #624378;
+    
 }
 .conteudo{
     margin-top: 15px;
@@ -77,22 +76,22 @@ table td img{
     cursor: pointer;
 }
 
-.center{
-    text-align: center;
+ .center{ 
+     text-align: center;
    
-}
+} 
 #fonte_tabela {
     color: #dccb7b;
 }
 
-#banner{
+/* #banner{
     margin:auto;
     width: 90%;
     height: 250px;
     
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */ 
 /* #btnAnte, #btnProx{ */
     /* line-height: 200px;
     font-size: 30px;
@@ -105,21 +104,28 @@ table td img{
 }
 #btnProx{
     float:right;
-} */
+}*/
 
 /* Comecei a mudar */
 #banner_despesa {
-    width: 100%;
-    height: 405px;
     background-color: #f3eedc;
 }
+
 #banner_pg4 {
     margin-left: 250px;
-
-    
 }
 #imagem_tamanho {
     width: 58.56vw;
     height: 60.88vh;  
     
+}
+
+@media (max-width: 375px){
+
+    #banner_despesa{
+        min-width: 300px;
+    }
+    
+    
+
 }
