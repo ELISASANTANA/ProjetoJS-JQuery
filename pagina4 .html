@@ -15,10 +15,10 @@
         <div id="logo"><img src="img/logo.jpeg" alt="Imagem da Logo da Empresa"></div>
         <div id="menu">
             <ul>
-                <li><a href="#">Home</a></li>|
+                <li><a href="index.html">Home</a></li>|
                 <li><a href="calculadora.html">Orçamento</a></li>|
                 <li><a href="Cadastro.html">Cadastro</a></li>|
-                <li><a href="pagina4 .html">Acompanhamento de despesas</a></li>
+                <li><a href="pagina4 .html">Despesas</a></li>
             </ul>
         </div>
         <div id="acessivel">
@@ -31,11 +31,11 @@
         </div>
     </header>   
     
-    <picture id=banner_despesa>
-        <div id=banner_pg4>
+    <div class=banner_despesa>
+        <div class=banner_pg4>
             <img id="imagem_tamanho" src="img/banner_p4_800.png" alt="Banner sobre finanças">   
         </div>
-    </picture>
+    </div>
     
     <main>
         <section class = "titulo">
@@ -51,6 +51,7 @@
                     <option value="Residencial">Residencial</option>
                     <option value="Saúde">Saúde</option>
                     <option value="Lazer">Lazer</option>
+                    <option value="Estética">Estética</option>
                     <!-- <input type="" id="nomeProduto"></input>  -->
                 </select> 
             </div>
@@ -74,10 +75,8 @@
                     <th class="center">Valor</th>
                     <th class="center">Açoes</th>
                 </thead>
-                <button onclick="clicar()">Resultado</button>
-                <p class=resultado></p>
                 <tbody id="tbody">
-                    
+            
                 </tbody>
             </table>
             <div>

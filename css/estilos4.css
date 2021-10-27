@@ -76,7 +76,7 @@ table td img{
     cursor: pointer;
 }
 
- .center{ 
+.center{ 
      text-align: center;
    
 } 
@@ -84,48 +84,36 @@ table td img{
     color: #dccb7b;
 }
 
-/* #banner{
-    margin:auto;
-    width: 90%;
-    height: 250px;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-} */ 
-/* #btnAnte, #btnProx{ */
-    /* line-height: 200px;
-    font-size: 30px;
-    color: rgb(0,0,0,0.5);
-    font-weight: bold;
-    cursor:pointer;
-} */
-/* #btnAnte{
-    float:left;
+.banner_despesa {
+    background-color: #f3eedc; 
+     display: grid;
+     grid-template-rows: auto;
+     text-align: center;
 }
-#btnProx{
-    float:right;
-}*/
+
+.banner_pg4{
+    height: auto;
+}
+
 
 /* Comecei a mudar */
-#banner_despesa {
+/* #banner_despesa {
     background-color: #f3eedc;
-}
+} */
 
-#banner_pg4 {
+/* #banner_pg4 {
     margin-left: 250px;
-}
+} */
 #imagem_tamanho {
     width: 58.56vw;
     height: 60.88vh;  
-    
 }
 
 @media (max-width: 375px){
 
-    #banner_despesa{
-        min-width: 300px;
+    #imagem_tamanho{
+        width: 100%;    
+        height: 30vh;
     }
-    
-    
 
 }

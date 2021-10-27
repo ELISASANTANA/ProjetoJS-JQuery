@@ -1,0 +1,110 @@
+
+body{
+    background: linear-gradient(180deg, #f3eedc 20%, #e0d29c 100%);
+}
+
+/* estilização das imagens alternadas */
+.imgAlternadas{
+    display: grid;
+    grid-template-columns:50% 50%;
+}
+
+section{
+    margin-left: 1%;
+}  
+
+h1{
+    text-align: center;
+    line-height: 2.2em; 
+}
+
+.quemSomos{
+    line-height: 1.2em;
+    font-family: Roboto, sans-serif, Verdana;
+    white-space:pre-wrap;
+}
+
+    /* estilizção da da lista diferenciais */
+#diferenciais, p, li{
+    font-family: Roboto, sans-serif, Verdana;
+    margin-left: 2%;
+} 
+
+b{
+    color: #c9b164;
+}
+    /* conteúdo do texto que tem nas imgalternadas */
+.conteudoTexto{
+    /* line-height: 1.2em; */
+    font-family: Roboto, sans-serif, Verdana;
+    /* white-space:pre-line; */
+    margin: 30px;
+}
+
+.conteudoTexto h3{
+    font-weight: bold;
+    font-family:Roboto, sans-serif, Verdana;
+    margin: 30px;
+}  
+
+.imagensIndex img{
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+}
+
+.divfundadores{
+    margin-top: 3%;
+}
+
+/* div com as fotos */
+.worker{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3% ;
+    padding-bottom: 3%;
+}
+
+/* imagens da equipe  */
+.imgPolly{
+    width: 150px;
+    height:150px;
+    padding-top: 4%;
+} 
+
+body{
+    background-color:#f8f7ef;
+}
+
+.texto{
+    display: none;
+    width: 60%;
+    height: auto;
+    background-color: #f8f7ef;
+    position: fixed;
+    left: 0;
+    bottom: 55%;
+    border: 2px solid, #c9b164;
+    padding: 2%;
+    color: #2e1652;
+}
+
+.alinhamento{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media(max-width: 375px){
+    .worker{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .imgPolly{
+        width: 100px;
+        height: 100px;
+        padding-top: 5%;
+    } 
+    
+}
