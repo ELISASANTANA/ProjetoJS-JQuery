@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estiloCad.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script type="text/Javascript" src="js/jsCadNovo.js"></script>
     <title>Cadastro</title>
 </head>
-
 <body>
     <header class="header">
         <div id="logo"><img src="img/logo.jpeg" alt="Imagem da Logo da Empresa"></div>
@@ -32,9 +34,15 @@
         </div>
     </header>
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <!---------------------Iniciando o formulário de Cadastro------------------------------------>
     <main>
-
         <div class="agrupamento">
             <!--Form com action para chamar um arquivo e method para selecionar o método de envio desses dados-->
             <form method="POST" action="" id="cadastro" name="cadastro" onsubmit="event.preventDefault();">
@@ -198,7 +206,30 @@
 
         <div id="copyright">&copyGOLDEN HOME</div>
     </footer>
+    <script type="text/javascript" charset="utf-8">
+        var $z = JQuery.noConflict();
+        $z(document).ready(function () {
+            $z("#fonteMaior").click(function () {
+                var size = $z("h2, input, label, select, textarea").css('font-size');
 
+                size = size.replace('px', '');
+                size = parseInt(size) + 2;
+
+                $z("h2, input, label, select, textarea").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+
+            $z("#fonteMenor").click(function () {
+                var size = $z("h2, input, label, select, textarea").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) - 2;
+
+                $z("h2, input, label, select, textarea").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -10,31 +10,6 @@
     <script type="text/javascript" href="js/acessibilidade.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-    <!-- <script>
-        var $z = jquery.noConflict();
-        $z(document).ready(function () {
-            $z("#fonteMaior").click(function () {
-                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) + 2;
-
-                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-
-            $z("#fonteMenor").click(function () {
-                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) - 2;
-
-                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-        });
-    </script> -->
-
     <link rel="stylesheet" href="css/calculdadora.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Orçamento</title>
@@ -251,9 +226,11 @@
                     <div id="input"></div>
                     <div id="cientifica">
                         <div class="btnCentro">
-                            <button id="raiz" class="btn operador">x^0.5</button>
-                            <button id="quadrado" class="btn operador" value="2">x^2</button>
-                            <button id="cubo" class="btn operador">x^3</button>
+                            <button id="raiz" class="btn operador especial"><img src="img/raiz.png" alt="">
+                                x^0.5</button>
+                            <button id="quadrado" class="btn operador especial" value="2"><img src="img/elevado2.png"
+                                    alt=""> x^2</button>
+                            <button id="cubo" class="btn operador especial">x^3</button>
                             <button id="voltar" class="btn limpar operador">C</button>
                         </div>
                         <div class="btnCentro">
@@ -327,6 +304,31 @@
     </footer>
 
     <script type="text/javascript" src="js/calculadora.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var $z = JQuery.noConflict();
+        $z(document).ready(function () {
+            $z("#fonteMaior").click(function () {
+                var size = $z("h1, h2, h3, p, ul, li, a").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) + 2;
+
+                $z("h2, h3, p, ul, li, a").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+
+            $z("#fonteMenor").click(function () {
+                var size = $z("h1, h2, h3, p, ul, li, a").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) - 2;
+
+                $z("h2, h3, p, ul, li, a").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+        });
+    </script>
+
 </body>
 
 </html>

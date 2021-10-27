@@ -15,11 +15,14 @@ section{
 
 h1{
     text-align: center;
-    line-height: 2.2em; 
+    line-height: 2.2em;
+    margin: 20px; 
+    color:#624378;
+    font-weight: bold;
 }
 
 .quemSomos{
-    line-height: 1.2em;
+    line-height: 1.5em;
     font-family: Roboto, sans-serif, Verdana;
     white-space:pre-wrap;
 }
@@ -35,16 +38,24 @@ b{
 }
     /* conteúdo do texto que tem nas imgalternadas */
 .conteudoTexto{
-    /* line-height: 1.2em; */
-    font-family: Roboto, sans-serif, Verdana;
-    /* white-space:pre-line; */
+    font-family: Open sans-serif;
     margin: 30px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
+
+.conteudoTexto p{
+    font-size: 20px;
+}
+
 
 .conteudoTexto h3{
     font-weight: bold;
-    font-family:Roboto, sans-serif, Verdana;
+    font-family:Open sans-serif;
     margin: 30px;
+    font-size: 25px;
+    text-align: center;
+    color: #624378;
 }  
 
 .imagensIndex img{
@@ -52,6 +63,13 @@ b{
     background-size: cover;
     height: 100%;
 }
+
+#diferenciais span{
+    text-transform: uppercase;
+    color: #624378;
+    font-weight: bold;
+}
+
 
 .divfundadores{
     margin-top: 3%;
@@ -87,6 +105,12 @@ body{
     border: 2px solid, #c9b164;
     padding: 2%;
     color: #2e1652;
+}
+
+#divfundadores h3{
+    text-transform: uppercase;
+    color: #624378;
+    font-weight: bold;
 }
 
 .alinhamento{

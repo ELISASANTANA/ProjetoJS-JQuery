@@ -96,6 +96,11 @@ section li {
     color: #DCCB7B;
 }
 
+.especial{
+    color: #624378;
+    font-size: 0px;
+}
+
 .sub-conteiner{
     display: flex;
     flex-direction: column;

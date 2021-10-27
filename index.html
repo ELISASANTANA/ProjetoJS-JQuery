@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
@@ -65,22 +66,15 @@
     <!-- TIRAR E SECTION E INSERIR O CONTEUDO AQUI -->
 
     <section>
-        <h1>Somos a Golden Home – seu serviço de moradia, por assinatura, para a melhor idade!
+        <h>SOMOS O GOLDEN HOME – SEU SERVIÇO DE MORADIA, POR ASSINATURA, PARA A MELHOR IDADE!
         </h1>
-        <P class="quemSomos"> Fundada em 2000, <B> GOLDEN HOME </B> é o primeiro serviço de moradia por assinatura
-            especializado para a terceira idade no Brasil, localizado em Balneário Camboriú/SC. Com tradição,
-            credibilidade, inovação e serviços de alta qualidade, oferecemos a mais ampla carteira de flats para quem
-            deseja desfrutar da maturidade com qualidade de vida, conforto, segurança, cuidado, interação social e
-            lazer!
+        <P class="quemSomos">Fundado em 2000, o <B> GOLDEN HOME </B> é o primeiro serviço de moradia por assinatura especializado para a terceira idade no Brasil, localizado em Balneário Camboriú/SC. Com tradição, credibilidade, inovação e serviços de alta qualidade, oferecemos a mais ampla carteira de flats para quem deseja desfrutar da maturidade com qualidade de vida, conforto, segurança, cuidado, interação social e lazer!
         </P>
-        <p class="quemSomos"> Somos uma empresa humana, com canais de atendimento presencial e digital, possibilitando
-            ao cliente escolher o melhor caminho para se relacionar. Temos certificação ISO 9001 e certificação de
-            acessibilidade que atestam o nosso alinhamento de negócios, nossas práticas, a um modelo de gestão de
-            qualidade com excelência. Tudo para garantir a você a melhor experiência!
+        <p class="quemSomos">Somos uma empresa humana, com canais de atendimento presencial e digital, possibilitando ao cliente escolher o melhor caminho para se relacionar. Temos certificação ISO 9001 e certificação de acessibilidade que atestam o nosso alinhamento de negócios, nossas práticas, a um modelo de gestão de qualidade com excelência. Tudo para garantir a você a melhor experiência!
         </p>
         <ul>
             <div id="diferenciais">
-                <p>Nossos Diferenciais:</p><br>
+                <span>Nossos Diferenciais:</span><br>
 
                 <li> Imóveis inteligentes, adaptados, conectados e sustentáveis. Perfeitos para essa nova fase da sua
                     vida!</li>
@@ -242,8 +236,31 @@
 
         <div id="copyright">&copyGOLDEN HOME</div>
     </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        // var $z = JQuery.noConflict();
+        $z(document).ready(function () {
+            $z("#fonteMaior").click(function () {
+                var size = $z("h1, h2, h3, p, li, legend").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) + 2;
+
+                $z("h1, h2, h3, p, li, legend").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+
+            $z("#fonteMenor").click(function () {
+                var size = $z("h1, h2, h3, p, li, legend").css('font-size');
+
+                size = size.replace('px', '');
+                size = parseInt(size) - 2;
+
+                $z("h1, h2, h3, p, li, legend").animate({ 'font-size': size + 'px' });
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

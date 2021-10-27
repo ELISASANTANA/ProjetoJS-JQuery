@@ -374,7 +374,7 @@ $('#resultado').on('click', function () {
                 c = parseFloat(a) ** parseFloat(2);
             }
 
-            if(elemento == "x^3"){
+            if(elemento == "x3"){
                 c = parseFloat(a) ** parseFloat(3);
             }
 
