@@ -72,6 +72,7 @@
 
         <section class = "card">
             <div class="linhaDeInput">
+                <!-- Colocação do seletor para o usuário escolher a categoria do serviço que deseja -->
                 <label>Categoria</label>
                 <select id="nomeProduto" nome="Categoria" type="text">
                     <option value="">Selecione a Categoria</option>
@@ -79,7 +80,7 @@
                     <option value="Saúde">Saúde</option>
                     <option value="Lazer">Lazer</option>
                     <option value="Estética">Estética</option>
-                    <!-- <input type="" id="nomeProduto"></input>  -->
+                   
                 </select> 
             </div>
             <div class="linhaDeInput">
@@ -90,7 +91,9 @@
                 <label>Valor</label>
                 <input type="text" id="valorProduto" placeholder="Valor do serviço"></input>
             </div>
+<!-- Botão onde o usuario adiciona as informações referente ao serviço -->
             <button class="botao" id="btn1" onclick="produto.salvar()">Salvar</button>
+            <!-- Botão onde o usuario pode limpar os campos  -->
             <button class="botao" onclick="produto.cancelar()">Cancelar</button>
         </section>
         <section class="conteudo">
@@ -119,18 +122,18 @@
         <div id="grid-container">
     
             <div class="box">
-                <div id="contato"><img src="img/telefone.webp" alt=""></div>
-                    <p>33 3333 3333</p>
+                <div id="contato"><img src="img/tel.png" alt=""></div>
+                <p>33 3333 3333</p>
             </div>
-    
+
             <div class="box">
-                    <div id="rede-social"><img src="img/instragram.png" alt=""></div>
-                    <p>@HOMEGOLDEN</p>
+                <div id="rede-social"><img src="img/insta.png" alt=""></div>
+                <p>@HOMEGOLDEN</p>
             </div>
-    
+
             <div class="box">
-                    <div id="email"><img src="img/email2.png" alt=""></div>
-                    <p>contato@homegolden.com</p>
+                <div id="email"><img src="img/mail.png" alt=""></div>
+                <p>contato@homegolden.com</p>
             </div>
     
             <div class="box">

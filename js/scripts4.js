@@ -1,11 +1,9 @@
-// declaração de uma classe com o nome de Produto
+// declaração de uma classe.
 class Produto {
   //definição dos atributos da classe
   constructor() {
     this.id = 1
-    //this.nome = "";
     this.servico = ''
-    //this.valor = 0;
     this.arrayProdutos = []
 
     //propriedade para testar qual método deve ser executado pelo botão btn1
@@ -24,12 +22,13 @@ class Produto {
   //     return despesa;
   // }
 
-  //salvar o produto digitado pelo usuário no objeto produto
+  // Quendo usuario apertar para salvar as informações ele chama o método salvar  e também já chama o método de leitura dos dados (lerdados)
+  // Criação de variável que também vai ser um objeto
   salvar() {
     //alert("vamos salvar");
     let produto = this.lerDados()
 
-    //chamamos o método para validar o conteúdo dos inputs (somente verificou inputs vazios)
+    //chamamos o método para validar para verficar se os campos (inputs) estão vazios. Então vamos enviar os produtos para verificar se os dados lidos estão vazios. Essa validação será feita através de uma condicional.
     if (this.validarCampos(produto)) {
       //alert("Podemos salvar");
       if (this.testeBtn == 0) {
@@ -39,28 +38,27 @@ class Produto {
       }
       this.listaDados()
       this.cancelar()
-      this.atualizaDisplay();
+      this.atualizaDisplay()
     }
 
     // this.soma();
     //this.cancelar();
   }
+  // Criação de uma função soma e com isso mostrar para o usuário o total do valor dos serviços.
+  soma() {
+    let somatorio = 0
 
-  soma(){
-    let somatorio = 0; 
-
-    for(let i=0; i < this.arrayProdutos.length; i++){
-
+    for (let i = 0; i < this.arrayProdutos.length; i++) {
       // console.log(this.arrayProdutos[i]);
 
-      somatorio += parseFloat(this.arrayProdutos[i].valor);
+      somatorio += parseFloat(this.arrayProdutos[i].valor)
     }
     return somatorio
     // console.log(somatorio);
   }
-
-  atualizaDisplay(){
-    document.getElementById('displaySoma').innerHTML = this.soma();
+  // Atualização do somatório para o usuário no site
+  atualizaDisplay() {
+    document.getElementById('displaySoma').innerHTML = this.soma()
   }
 
   //método para alimentar a tabela com os produtos
@@ -71,7 +69,7 @@ class Produto {
     // limpar a tabela antes de ser mostrada
     tbody.innerText = ''
 
-    //loop para percorrer o array de Produtos
+    //ciclos para percorrer o array
     for (let i = 0; i < this.arrayProdutos.length; i++) {
       // inserir um nova linha no tbody
       let novaLinha = tbody.insertRow()
@@ -100,14 +98,14 @@ class Produto {
       //adicionando um filho para a quarta coluna
       td_acoes.appendChild(imgEdit)
 
-      // criando um elemento de imagem para ser colocado na quarta coluna da linha
+      // criando um elemento de imagem
       let imgDelete = document.createElement('img')
       // atribuindo a esse elemento o caminho
       imgDelete.src = 'img/delete.png'
-      //adicionando um filho para a quarta coluna
+      //adicionando um filho para a quinta coluna
       td_acoes.appendChild(imgDelete)
 
-      //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método)
+      //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método). O evento será quando o usuário clicar (onclik) e no outro parâmetro será nossa função deletar
       imgDelete.setAttribute(
         'onclick',
         'produto.deletar(' + this.arrayProdutos[i].id + ')'
@@ -120,6 +118,7 @@ class Produto {
       )
     }
   }
+  // O push vai adicionar o nossos campos dentro do array e realizando o incremento no ID
   adicionar(produto) {
     this.arrayProdutos.push(produto)
     this.id++
@@ -135,7 +134,7 @@ class Produto {
     this.testeBtn = 0
     //alert("vamos cancelar");
   }
-  //capturar o que foi digitado pelo usuário nos inputs
+  //capturar o que foi digitado pelo usuário nos inputs. Teremos que colocar o value para pegar a informação do valor dos campos.
   lerDados() {
     let produto = {}
 
@@ -152,13 +151,13 @@ class Produto {
   validarCampos(produto) {
     let msg = ''
     if (produto.nome == '') {
-      msg += '- informe o nome do pacote \n'
+      msg += '- informe o nome da categoria \n'
     }
     if (produto.servico == '') {
       msg += '- informe o tipo de serviço \n'
     }
     if (produto.valor == '') {
-      msg += '- informe o valor do produto \n'
+      msg += '- informe o valor do serviço \n'
     }
     if (msg != '') {
       alert(msg)
@@ -166,7 +165,7 @@ class Produto {
     }
     return true
   }
-
+  // Vamos fazer um for que vai iniciar com zero e vamos verificar até onde seja menor que os itens da array e realiza um incremento para percorrer o array. E através de uma condicional vamos verificar o item na qual se quer deletar e também iremos utilizar o splice
   deletar(idProcurado) {
     //alert("Vamos deletar o produto de id: " + idProcurado);
     if (confirm('Deseja realmente deletar o produto de id ' + idProcurado)) {
@@ -222,9 +221,5 @@ class Produto {
 }
 var produto = new Produto()
 
-//*******************Código para o banner rotativo ***********/
-
 // lista das imagens a serem exibidas
-function clicar(){
-  
-}
+function clicar() {}

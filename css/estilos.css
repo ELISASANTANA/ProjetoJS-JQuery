@@ -68,7 +68,7 @@
 }
 
 .footer{
-    background-color: #624378;
+    background-color: #3f3655;
     border-top: 5px solid #DCCB7B;
     border-bottom: 5px solid #DCCB7B;
     width: 100%;
@@ -104,7 +104,7 @@
 .box p{
     margin: auto;
     padding-left: 10px;
-    color: black;
+    color: #DCCB7B;
     font-weight: bold;
     font-size: 15px;
     font-family: "Open Sans", sans-serif;

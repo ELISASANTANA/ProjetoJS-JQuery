@@ -41,7 +41,7 @@ h1{
 }
 
 /* estilizção da da lista diferenciais */
-.diferenciais, .servicos, li{
+.diferenciais, .servicos, .lista{
     margin-left: 2%;
     line-height: 2em;
     font-size: 16px;
