@@ -9,39 +9,39 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/acessibilidade.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
+        let tamanhoFonte = "a";
+
+    function fonte(e) {
+
+        var elemento = $(".aumentaFonte");
+        var fonte = parseInt(elemento.css('font-size'));
+
+        var body = $("body");
+        const fonteNormal = parseInt(body.css('font-size'));
+
+
+        if (tamanhoFonte == 'a') {
+            fonte++;
+            tamanhoFonte = 'd'
+        }else if(tamanhoFonte == 'd'){
+            fonte--;
+            tamanhoFonte = 'a'
+        }
+
+        elemento.css("fontSize", fonte);
+
+}
     </script>
 
     <title>GOLDEN HOME</title>
 </head>
 
 <body>
-    <!-- responsividade A+ e A- -->
-    <script>
-        var $z = JQuery.noConflict();
-        $z(document).ready(function () {
-            $z("#fonteMaior").click(function () {
-                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) + 2;
-
-                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-
-            $z("#fonteMenor").click(function () {
-                var size = $z("p, h1, h2, h3, h4, ul").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) - 2;
-
-                $z("p, h1, h2, h3, h4, ul").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-        });
-    </script>
     <!-- header menu  -->
     <header class="header">
         <div id="logo"><img src="img/logo.jpeg" alt="Imagem da Logo da Empresa"></div>
@@ -54,47 +54,30 @@
             </ul>
         </div>
         <div id="acessivel">
-            <span id="fonteMenor">
-                <a title="Diminuir Fonte" alt="Diminuir">A-</a>
-            </span>
-            <span id="fonteMaior">
-                <a title="Aumentar Fonte" alt="Aumentar">A+</a>
-            </span>
+            <button class="botaoA" onclick="fonte()">A+</button>
         </div>
     </header>
 
     <!-- TIRAR E SECTION E INSERIR O CONTEUDO AQUI -->
 
     <section>
-        <h>SOMOS O GOLDEN HOME – SEU SERVIÇO DE MORADIA, POR ASSINATURA, PARA A MELHOR IDADE!
+        <h1 class="aumentaFonte">SOMOS O GOLDEN HOME – SEU SERVIÇO DE MORADIA, POR ASSINATURA, PARA A MELHOR IDADE!
         </h1>
-        <P class="quemSomos">Fundado em 2000, o <B> GOLDEN HOME </B> é o primeiro serviço de moradia por assinatura especializado para a terceira idade no Brasil, localizado em Balneário Camboriú/SC. Com tradição, credibilidade, inovação e serviços de alta qualidade, oferecemos a mais ampla carteira de flats para quem deseja desfrutar da maturidade com qualidade de vida, conforto, segurança, cuidado, interação social e lazer!
-        </P>
-        <p class="quemSomos">Somos uma empresa humana, com canais de atendimento presencial e digital, possibilitando ao cliente escolher o melhor caminho para se relacionar. Temos certificação ISO 9001 e certificação de acessibilidade que atestam o nosso alinhamento de negócios, nossas práticas, a um modelo de gestão de qualidade com excelência. Tudo para garantir a você a melhor experiência!
+        <p class="quemSomos aumentaFonte" class="servicos">Fundado em 2000, o <B> GOLDEN HOME </B> é o primeiro serviço de moradia por assinatura especializado para a terceira idade no Brasil, localizado em Balneário Camboriú/SC. Com tradição, credibilidade, inovação e serviços de alta qualidade, oferecemos a mais ampla carteira de flats para quem deseja desfrutar da maturidade com qualidade de vida, conforto, segurança, cuidado, interação social e lazer!
         </p>
         <ul>
-            <div id="diferenciais">
-                <span>Nossos Diferenciais:</span><br>
-
-                <li> Imóveis inteligentes, adaptados, conectados e sustentáveis. Perfeitos para essa nova fase da sua
-                    vida!</li>
-                <li> Imóveis prontos para morar: bom gosto, estilo e praticidade. Da decoração às comodidades, os flats
-                    são completos para você só chegar e desfrutar!</li>
-                <li> É incluso na sua assinatura: água, luz, wifi, TV, gás, manutenção, decoração, limpeza semanal. E
-                    assinando por mais de 6 meses, ganhe benefícios e descontos mensais.</li>
-                <li>More pelo tempo que quiser! Fique por um ano, um mês ou um final de semana. No <b>GOLDEN HOME</b> é
-                    você quem decide quanto tempo ficar.</li>
-                <li> Infraestrutura completa de serviços residenciais, médicos, lazer e estéticos que podem ser
-                    incluídos na sua assinatura.</li>
-                <li> Possibilidade de estruturar seu plano de acordo com o seu desejo e necessidades, com a praticidade
-                    de gerar uma fatura única mensal.</li>
-                <li> Empresa socialmente engajada em ações filantrópicas.</li>
+            <div class="diferenciais ">
+                <h4 class="aumentaFonte">Nossos Diferenciais:</h4>
+                <li class="aumentaFonte"> Imóveis inteligentes, adaptados, conectados e sustentáveis e prontos para morar.</li>
+                <li class="aumentaFonte"> É incluso na sua assinatura: água, luz, wifi, TV, gás, manutenção, decoração, limpeza semanal.</li>
+                <li class="aumentaFonte">More pelo tempo que quiser! No<b> GOLDEN HOME</b> é você quem decide quanto tempo ficar.</li>
+                <li class="aumentaFonte">Infraestrutura completa de serviços residenciais, médicos, lazer e estéticos que podem ser incluídos na sua assinatura.</li>
         </ul>
         </di>
         <div class="imgAlternadas">
             <div class="conteudoTexto">
-                <h3>SAÚDE:</h3>
-                <p>Médico e Enfermaria (plantão 24hs), Fisioterapeuta, Pilates, Acupuntura.</p>
+                <h3 class="aumentaFonte">SAÚDE:</h3>
+                <p class="aumentaFonte" class="servicos">Médico e Enfermaria (plantão 24hs), Fisioterapeuta, Pilates, Acupuntura.</p>
             </div>
             <div class="imagensIndex">
                 <img src="img/piscina.jpg" alt="imagem de uma paisagem com piscina">
@@ -102,14 +85,14 @@
             <div class="imagensIndex">
                 <img src="img/Cora-6-e1545047813609.jpg" alt="pessoas dançando ">
             </div>
-            <div class="conteudoTexto">
+            <div class="conteudoTexto" class="aumentaFonte">
                 <h3>RESIDENCIAL:</h3>
-                <p>Lavanderia, Diarista, Restaurante (com 6 refeições diárias), Enxoval, Serviços de Mercado,
+                <p class="servicos">Lavanderia, Diarista, Restaurante (com 6 refeições diárias), Enxoval, Serviços de Mercado,
                     Ferramentaria, Wifi nas áreas comuns.</p>
             </div>
-            <div class="conteudoTexto">
+            <div class="conteudoTexto" class="aumentaFonte">
                 <h3>LAZER:</h3>
-                <p>Aulas de - Hidroginástica, Yoga, Dança de Salão, Coral, Violão e Teclado, Academia, Salão de Jogos,
+                <p class="servicos">Aulas de Hidroginástica, Yoga, Dança de Salão, Coral, Violão e Teclado, Academia, Salão de Jogos,
                     Cinema, Sala de Leitura, Pet Place, Salão de Festas, Piscina, Sauna.</p>
             </div>
             <div class="imagensIndex">
@@ -120,8 +103,7 @@
             </div>
             <div class="conteudoTexto">
                 <h3>ESTÉTICO:</h3>
-                <p> Salão de beleza/barbearia, manicure, massagens, tratamentos faciais e corporais completos.
-                </p>
+                <p class="aumentaFonte servicos">Salão de beleza/barbearia, manicure, massagens, tratamentos faciais e corporais completos.</p>
             </div>
         </div>
         <!-- equipe com efeito em java -->
@@ -212,16 +194,17 @@
             </div>
             <div class="box">
                 <div class="info">
-                    <div id="endereco"></div>
-                    <p>Rua do Paraiso, 1000 - Balneário Camboriú - SC</p> <br>
-                    <P>CEP: 14520-51</P>
+                    <div id="atendimento" ></div>
+                    <p>Horário de atendimento:</p> 
+                    <p>das 08:30 às 20h</p>
                 </div>
             </div>
+
             <div class="box">
                 <div class="info">
-                    <div id="atendimento"></div>
-                    <p>Horário de atendimento</p> <br>
-                    <p>08:30 as 20:00</p>
+                    <div id="endereco" ></div>
+                    <p>Rua do Paraiso, 1000 - Balneário Camboriú/SC</p> 
+                    <p>CEP: 14520-51</p>
                 </div>
             </div>
         </div>
@@ -237,30 +220,6 @@
         <div id="copyright">&copyGOLDEN HOME</div>
     </footer>
     <script src="js/index.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        // var $z = JQuery.noConflict();
-        $z(document).ready(function () {
-            $z("#fonteMaior").click(function () {
-                var size = $z("h1, h2, h3, p, li, legend").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) + 2;
-
-                $z("h1, h2, h3, p, li, legend").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-
-            $z("#fonteMenor").click(function () {
-                var size = $z("h1, h2, h3, p, li, legend").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) - 2;
-
-                $z("h1, h2, h3, p, li, legend").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-        });
-    </script>
 </body>
 
 </html>

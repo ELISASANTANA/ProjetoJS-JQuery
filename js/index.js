@@ -24,20 +24,3 @@ $("#comercial").mouseover(function(){
 }).mouseout(function(){
     $("[name=comercial]").hide(500)
 })
-
-
-
-
-//outra forma de fazer 
-// $("img").click(function() {
-    
-//     $(".texto").css("display","none")
-//     var nome = $(this).attr("id")
-//     $("p[name='"+ nome + "']").css("display","block")
-
-//     console.log(this);
-//     console.log(nome);
-    
-// });
-
-

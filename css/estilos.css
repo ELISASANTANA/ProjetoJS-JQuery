@@ -93,6 +93,14 @@
     margin-left: auto;
 }
 
+.botaoA{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #DCCB7B;
+    cursor: pointer;
+}
+
 .box p{
     margin: auto;
     padding-left: 10px;

@@ -30,7 +30,7 @@ let dataMin = "1891-03-16"
 //If para verificar se o campo data de nascimento do formulário está vazio ou com data posterior à data máxima limite de "2021-03-16".
 if (document.cadastro.dataNascimento.value == "" || document.cadastro.dataNascimento.value > dataMax) {
     //Caixa trazendo a informação de que o campo não foi preenchido corretamente.
-    alert("Data de nascimento inválida!");
+    alert("Data de nascimento inválida! Selecione uma data entre 16/03/1891 a 16/03/2021.");
     //Focus para setar para a campo que não foi preenchida corretamente.
     document.cadastro.dataNascimento.focus();
     //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.
@@ -38,7 +38,7 @@ if (document.cadastro.dataNascimento.value == "" || document.cadastro.dataNascim
     //Else if para verificar se o campo data de nascimento do formulário está com data anterior à data mínima limite de "1891-03-16".
 } else if (document.cadastro.dataNascimento.value < dataMin) {
     //Caixa trazendo a informação de que o campo não foi preenchido corretamente.
-    alert("Data de nascimento inválida!");
+    alert("Data de nascimento inválida! Selecione uma data entre 16/03/1891 a 16/03/2021.");
     //Focus para setar para a campo que não foi preenchida corretamente.
     document.cadastro.dataNascimento.focus();
     //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.

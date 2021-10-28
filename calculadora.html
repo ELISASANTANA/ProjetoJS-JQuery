@@ -13,6 +13,30 @@
     <link rel="stylesheet" href="css/calculdadora.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Orçamento</title>
+    <script>
+        let tamanhoFonte = "a";
+
+    function fonte(e) {
+
+        var elemento = $(".aumentaFonte");
+        var fonte = parseInt(elemento.css('font-size'));
+
+        var body = $("body");
+        const fonteNormal = parseInt(body.css('font-size'));
+
+
+        if (tamanhoFonte == 'a') {
+            fonte++;
+            tamanhoFonte = 'd'
+        }else if(tamanhoFonte == 'd'){
+            fonte--;
+            tamanhoFonte = 'a'
+        }
+
+        elemento.css("fontSize", fonte);
+
+}
+    </script>
 </head>
 
 <body>
@@ -27,28 +51,19 @@
             </ul>
         </div>
         <div id="acessivel">
-            <span id="fonteMenor">
-                <a title="Diminuir Fonte" alt="Diminuir">A-</a>
-            </span>
-            <span id="fonteMaior">
-                <a title="Aumentar Fonte" alt="Aumentar">A+</a>
-            </span>
+            <button class="botaoA" onclick="fonte()">A+</button>
         </div>
     </header>
-
-
     <main>
-        <h1>Orçamento</h1>
-        <h2>Quer saber o valor do seu pacote?</h2>
-        <h2>Calcule o valor dos serviços que deseja contratar.</h2>
+        <h1 class="aumentaFonte">Orçamento</h1>
+        <h2 class="aumentaFonte">Quer saber o valor do seu pacote?</h2>
+        <h2 class="aumentaFonte">Calcule o valor dos serviços que deseja contratar.</h2>
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>
             </div>
         </div>
-
-
         <!-- CATEGORIA 1 -->
         <section class="container">
             <div class="alinhamento grid">
@@ -61,7 +76,7 @@
                             <li>Residencial</li>
                         </ul>
                     </div>
-                    <div class="servicos">
+                    <div class="servicos aumentaFonte" >
                         <ul><span>Serviço</span>
                             <li>Flat (diária)</li>
                             <li>Flat (mensal)</li>
@@ -73,7 +88,7 @@
                             <li>Serviço de Mercado</li>
                         </ul>
                     </div>
-                    <div class="valor">
+                    <div class="valor aumentaFonte">
                         <ul><span>Valor(sessão/un)</span>
                             <li>R$ 250,00 </li>
                             <li>R$ 4.500,00</li>
@@ -172,17 +187,7 @@
             <!-- CALCULADORA SIMPLES -->
             <section class="alinhamento">
                 <div class="teste">
-                    <h4>Para mostrar que você está na </h4>
-                    <h4>melhor idade e apto a viver conosco, vamos te desafiar!</h4>
-                    <h4>Com auxilio da calculadora calcule:</h4>
-                    <ul type="1">
-                        <li class="pergunta">Qual a raiz quadrada de 400?</li>
-                        <input type="text"> <input type="button" value="enviar" id="resp1">
-                        <li class="pergunta">Qual o resultado de 54²?</li>
-                        <input type="text"> <input type="button" value="enviar" id="resp2">
-                        <li class="pergunta">Qual o resultado de 18³?</li>
-                        <input type="text"> <input type="button" value="enviar" id="resp3">
-                    </ul>
+                    <h2 class="tituloCalc">Utilize uma das calculadoras:</h2>
                 </div>
                 <div class="calculadora">
                     <button id="trocaCalc">Calculadora Simples</button>
@@ -226,11 +231,9 @@
                     <div id="input"></div>
                     <div id="cientifica">
                         <div class="btnCentro">
-                            <button id="raiz" class="btn operador especial"><img src="img/raiz.png" alt="">
-                                x^0.5</button>
-                            <button id="quadrado" class="btn operador especial" value="2"><img src="img/elevado2.png"
-                                    alt=""> x^2</button>
-                            <button id="cubo" class="btn operador especial">x^3</button>
+                            <button id="raiz" class="btn operador especial"><img src="img/raiz.png" alt=""> x^0.5</button>
+                            <button id="quadrado" class="btn operador especial" value="2"><img src="img/elevado.png" alt=""> x^2</button>
+                            <button id="cubo" class="btn operador especial"><img src="img/cubo.png" alt=""> x^3</button>
                             <button id="voltar" class="btn limpar operador">C</button>
                         </div>
                         <div class="btnCentro">
@@ -285,17 +288,17 @@
 
             <div class="box">
                 <div class="info">
-                    <div id="endereco"></div>
-                    <p>Rua do Paraiso, 1000 - Balneário Camboriú - SC</p> <br>
-                    <P>CEP: 14520-51</P>
+                    <div id="atendimento"></div>
+                    <p>Horário de atendimento:</p> 
+                    <p>das 08:30 às 20h</p>
                 </div>
             </div>
 
             <div class="box">
                 <div class="info">
-                    <div id="atendimento"></div>
-                    <p>Horário de atendimento</p> <br>
-                    <p>08:30 as 20:00</p>
+                    <div id="endereco"></div>
+                    <p>Rua do Paraiso, 1000 - Balneário Camboriú/SC</p> 
+                    <P>CEP: 14520-51</P>
                 </div>
             </div>
         </div>
@@ -304,7 +307,7 @@
     </footer>
 
     <script type="text/javascript" src="js/calculadora.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    <!-- <script type="text/javascript" charset="utf-8">
         var $z = JQuery.noConflict();
         $z(document).ready(function () {
             $z("#fonteMaior").click(function () {
@@ -327,7 +330,7 @@
                 return false;
             });
         });
-    </script>
+    </script> -->
 
 </body>
 

@@ -11,6 +11,29 @@
     <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/estilos4.css">
+    <script>
+        let tamanhoFonte = "a";
+
+    function fonte(e) {
+
+        var elemento = $(".aumentaFonte");
+        var fonte = parseInt(elemento.css('font-size'));
+
+        var body = $("body");
+        const fonteNormal = parseInt(body.css('font-size'));
+
+
+        if (tamanhoFonte == 'a') {
+            fonte++;
+            tamanhoFonte = 'd'
+        }else if(tamanhoFonte == 'd'){
+            fonte--;
+            tamanhoFonte = 'a'
+        }
+
+        elemento.css("fontSize", fonte);
+}
+    </script>
 </head>
 <body>
     <header class="header">
@@ -24,12 +47,7 @@
             </ul>
         </div>
         <div id="acessivel">
-            <span id="fonteMenor">
-                <a title="Diminuir Fonte" alt="Diminuir">A-</a>
-            </span>
-            <span id="fonteMaior">
-                <a title="Aumentar Fonte" alt="Aumentar">A+</a>
-            </span>
+            <button class="botaoA" onclick="fonte()">A+</button>
         </div>
     </header>   
     
@@ -72,8 +90,8 @@
                 <label>Valor</label>
                 <input type="text" id="valorProduto" placeholder="Valor do serviço"></input>
             </div>
-            <button id="btn1" onclick="produto.salvar()">Salvar</button>
-            <button onclick="produto.cancelar()">Cancelar</button>
+            <button class="botao" id="btn1" onclick="produto.salvar()">Salvar</button>
+            <button class="botao" onclick="produto.cancelar()">Cancelar</button>
         </section>
         <section class="conteudo">
             <table border=1>
@@ -88,7 +106,10 @@
             
                 </tbody>
             </table>
-            <div>
+            <div class="despesa"> 
+                <p id='tituloSoma' >TOTAL DE DESPESAS</p>
+                  <p id="displaySoma"></p>
+            </div>
                 
             </div>
         </section>
@@ -113,48 +134,24 @@
             </div>
     
             <div class="box">
-                    <div class="info">
-                        <div id="endereco"></div>
-                        <p>Rua do Paraiso, 1000 - Balneário Camboriú - SC</p> <br>
-                        <P>CEP: 14520-51</P>
-                </div>
-            </div>
-                
-            <div class="box">
                 <div class="info">
                     <div id="atendimento"></div>
-                    <p>Horário de atendimento</p> <br>
-                    <p>08:30 as 20:00</p>
+                    <p>Horário de atendimento:</p> 
+                    <p>das 08:30 às 20h</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="info">
+                    <div id="endereco"></div>
+                    <p>Rua do Paraiso, 1000 - Balneário Camboriú/SC</p> 
+                    <P>CEP: 14520-51</P>
                 </div>
             </div>
         </div>
     
         <div id="copyright">&copyGOLDEN HOME</div>    
     </footer>
-    <script type="text/javascript" charset="utf-8">
-        var $z = JQuery.noConflict();
-        $z(document).ready(function () {
-            $z("#fonteMaior").click(function () {
-                var size = $z("h2, span, label, select, input, th").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) + 2;
-
-                $z("h2, span, label, select, input, th").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-
-            $z("#fonteMenor").click(function () {
-                var size = $z("h2, span, label, select, input, th").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) - 2;
-
-                $z("h2, span, label, select, input, th").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-        });
-    </script>
     <script src="js/scripts4.js"></script>
 </body>
 </html>

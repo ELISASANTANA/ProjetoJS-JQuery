@@ -39,11 +39,30 @@ class Produto {
       }
       this.listaDados()
       this.cancelar()
+      this.atualizaDisplay();
     }
-    console.log(this.arrayProdutos)
 
+    // this.soma();
     //this.cancelar();
   }
+
+  soma(){
+    let somatorio = 0; 
+
+    for(let i=0; i < this.arrayProdutos.length; i++){
+
+      // console.log(this.arrayProdutos[i]);
+
+      somatorio += parseFloat(this.arrayProdutos[i].valor);
+    }
+    return somatorio
+    // console.log(somatorio);
+  }
+
+  atualizaDisplay(){
+    document.getElementById('displaySoma').innerHTML = this.soma();
+  }
+
   //método para alimentar a tabela com os produtos
   listaDados() {
     // declaração de uma variável para referenciar o tbody da tabela

@@ -12,6 +12,30 @@
     <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script type="text/Javascript" src="js/jsCadNovo.js"></script>
     <title>Cadastro</title>
+    <script>
+        let tamanhoFonte = "a";
+
+        function fonte(e) {
+
+        var elemento = $(".aumentaFonte");
+        var fonte = parseInt(elemento.css('font-size'));
+
+        var body = $("body");
+        const fonteNormal = parseInt(body.css('font-size'));
+
+
+        if (tamanhoFonte == 'a') {
+            fonte++;
+            tamanhoFonte = 'd'
+        }else if(tamanhoFonte == 'd'){
+            fonte--;
+            tamanhoFonte = 'a'
+        }
+
+        elemento.css("fontSize", fonte);
+
+}
+    </script>
 </head>
 <body>
     <header class="header">
@@ -25,12 +49,7 @@
             </ul>
         </div>
         <div id="acessivel">
-            <span id="fonteMenor">
-                <a title="Diminuir Fonte" alt="Diminuir">A-</a>
-            </span>
-            <span id="fonteMaior">
-                <a title="Aumentar Fonte" alt="Aumentar">A+</a>
-            </span>
+            <button class="botaoA" onclick="fonte()">A+</button>
         </div>
     </header>
 
@@ -51,94 +70,94 @@
                 </legend>
                 </br>
                 <div class="input-group">
-                    <label for="nome">Nome: <span style="color: red;">*</span></label>
-                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome" /></br>
+                    <label for="nome" class="aumentaFonte">Nome: <span style="color: red;">*</span></label>
+                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome" class="aumentaFonte"/></br>
 
-                    <label for="sobrenome">Sobrenome: <span style="color: red;">*</span></label>
-                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Insira seu sobrenome" /></br>
+                    <label for="sobrenome" class="aumentaFonte">Sobrenome: <span style="color: red;">*</span></label>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Insira seu sobrenome" class="aumentaFonte" /></br>
 
-                    <label for="email">E-mail: <span style="color: red;">*</span></label>
-                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail" /></br>
+                    <label for="email" class="aumentaFonte">E-mail: <span style="color: red;">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail" class="aumentaFonte" /></br>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
-                        <label>Telefone: <span style="color: red;">*</span></label>
-                        <input type="tel" id="telefone" placeholder="Insira seu telefone com DDD" /></br>
+                        <label>Telefone: <span style="color: red;" class="aumentaFonte">*</span></label>
+                        <input type="tel" id="telefone" placeholder="Insira seu telefone com DDD" class="aumentaFonte" /></br>
                     </div>
                     <div class="input-group">
-                        <label>Celular: <span style="color: red;">*</span></label>
-                        <input type="tel" id="celular" placeholder="Insira seu celular com DDD" /></br>
+                        <label class="aumentaFonte">Celular: <span style="color: red;">*</span></label>
+                        <input type="tel" id="celular" placeholder="Insira seu celular com DDD" class="aumentaFonte" /></br>
                     </div>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
-                        <label>CPF: <span style="color: red;">*</span></label>
-                        <input type="text" id="cpf" name="cpf" size="12" maxlength="11" placeholder="Insira seu CPF"/></br>
+                        <label class="aumentaFonte">CPF: <span style="color: red;">*</span></label>
+                        <input type="text" id="cpf" name="cpf" size="12" maxlength="11" placeholder="Insira seu CPF" class="aumentaFonte"/></br>
                     </div>
                     <div class="input-group">
                         <!--Data de nascimento com calendário-->
-                        <label>Data de Nascimento: <span style="color: red;">*</span></label>
-                        <input type="date" id="dataNascimento" name="dataNascimento" /></br>
+                        <label class="aumentaFonte">Data de Nascimento: <span style="color: red;">*</span></label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" class="aumentaFonte"/></br>
                     </div>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
                         <!--Select foi usado para abrir uma caixa para a seleção de identidade de gênero-->
-                        <label>Gênero: </label>
+                        <label class="aumentaFonte">Gênero:</label>
                         <select id="genero" name="genero">
-                            <option value="Selecionar">Selecione</option>
-                            <option value="Masculino">Homem Cisgênero</option>
-                            <option value="Masculino2">Homem Trans</option>
-                            <option value="Feminino">Mulher Cisgênero</option>
-                            <option value="Feminino2">Mulher Trans</option>
-                            <option value="Fluido">Gênero Fluído</option>
-                            <option value="Binario">Gênero Não-Binário</option>
-                            <option value="Queer">Queer</option>
-                            <option value="Transexual">Transexual</option>
-                            <option value="Transgenero">Transgênero</option>
-                            <option value="Travesti">Travesti</option>
-                            <option value="Nulo">Prefiro não responder</option>
-                            <option value="Outro">Outro</option>
+                        <option value="Selecionar">Selecione</option>
+                          <option value="Masculino">Homem Cisgênero</option>
+                          <option value="Masculino2">Homem Trans</option>
+                          <option value="Feminino">Mulher Cisgênero</option>
+                        <option value="Feminino2">Mulher Trans</option>
+                          <option value="Fluido">Gênero Fluído</option>
+                        <option value="Binario">Gênero Não-Binário</option>
+                          <option value="Queer">Queer</option>
+                          <option value="Transexual">Transexual</option>
+                          <option value="Transgenero">Transgênero</option>
+                          <option value="Travesti">Travesti</option>
+                        <option value="Nulo">Prefiro não responder</option>
+                          <option value="Outro">Outro</option>
                         </select></br>
                     </div>
                    
                     <div class="input-group">
-                        <label for="cep">CEP: <span style="color: red;">*</span></label>
-                        <input type="text" maxlength="9" id="cep" onblur="consultaCep()" placeholder="Insira seu CEP" /></br>
+                        <label for="cep" class="aumentaFonte">CEP: <span style="color: red;">*</span></label>
+                        <input type="text" maxlength="9" id="cep" onblur="consultaCep()" placeholder="Insira seu CEP" class="aumentaFonte"/></br>
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="logradouro">Rua:</label>
+                    <label for="logradouro" class="aumentaFonte">Rua:</label>
                     <input type="text" id="logradouro" /></br>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
-                        <label for="numero">Número: <span style="color: red;">*</span></label>
+                        <label for="numero" class="aumentaFonte">Número: <span style="color: red;">*</span></label>
                         <input type="text" id="numero" placeholder="Insira seu N°" /></br>
                     </div>
                     <div class="input-group">
-                        <label for="complemento">Complemento: </label>
+                        <label for="complemento" class="aumentaFonte">Complemento: </label>
                         <input type="text" id="complemento"/></br>
                     </div>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
-                        <label for="bairro">Bairro: </label>
+                        <label for="bairro" class="aumentaFonte">Bairro: </label>
                         <input type="text" id="bairro" /></br>
                     </div>
                     <div class="input-group">
-                        <label for="localidade">Cidade: </label>
+                        <label for="localidade" class="aumentaFonte">Cidade: </label>
                         <input type="text" id="localidade" /></br>
                     </div>
                 </div>
                 <div class="colunas">
                     <div class="input-group">
-                        <label for="uf">Estado: </label><input type="text" id="uf" /></br>
+                        <label for="uf" class="aumentaFonte">Estado: </label><input type="text" id="uf" /></br>
                     </div>
                     <div class="input-group">
-                        <label for="newsletter">Newsletter</label>
+                        <label for="newsletter" class="aumentaFonte">Newsletter</label>
                         <input type="checkbox" id="newsletter" />
-                        <small>Desejo receber novidades!</small>
+                        <small class="aumentaFonte">Desejo receber novidades!</small>
                     </div>
                 </div>
                 <div class="input-group">
@@ -147,11 +166,11 @@
                 </div>
                 <div class="botoes">
                     <!--Botão para limpar o relatório com reset-->
-                    <Button type="reset" class="botao" name="limpar">Limpar</button>
+                    <Button type="reset" class="botao" name="limpar" class="aumentaFonte">Limpar</button>
                     <!--Botão para enviar com visualização de alert para exibir informações-->
                     <Button type="text" class="botao" name="enviar" onclick="validarFormulario()"
                         value="Exibir Alert">Enviar</Button></br></br>
-                        <span style="color: red;">*Campos de preenchimento obrigatório</span>
+                        <span style="color: red;" class="aumentaFonte">*Campos de preenchimento obrigatório</span>
                 </div>
     
             </form>
@@ -189,47 +208,26 @@
 
             <div class="box">
                 <div class="info">
-                    <div id="endereco"></div>
-                    <p>Rua do Paraiso, 1000 - Balneário Camboriú - SC</p> <br>
-                    <P>CEP: 14520-51</P>
+                    <div id="atendimento"></div>
+                    <p>Horário de atendimento:</p> 
+                    <p>das 08:30 às 20h</p>
                 </div>
             </div>
 
             <div class="box">
                 <div class="info">
-                    <div id="atendimento"></div>
-                    <p>Horário de atendimento</p> <br>
-                    <p>08:30 as 20:00</p>
+                    <div id="endereco"></div>
+                    <p>Rua do Paraiso, 1000 - Balneário Camboriú/SC</p> 
+                    <P>CEP: 14520-51</P>
                 </div>
             </div>
+
+            
         </div>
 
         <div id="copyright">&copyGOLDEN HOME</div>
     </footer>
-    <script type="text/javascript" charset="utf-8">
-        var $z = JQuery.noConflict();
-        $z(document).ready(function () {
-            $z("#fonteMaior").click(function () {
-                var size = $z("h2, input, label, select, textarea").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) + 2;
-
-                $z("h2, input, label, select, textarea").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-
-            $z("#fonteMenor").click(function () {
-                var size = $z("h2, input, label, select, textarea").css('font-size');
-
-                size = size.replace('px', '');
-                size = parseInt(size) - 2;
-
-                $z("h2, input, label, select, textarea").animate({ 'font-size': size + 'px' });
-                return false;
-            });
-        });
-    </script>
+    
 </body>
 
 </html>

@@ -15,6 +15,10 @@ h1{
     font-size: 50px;
 }
 
+h2{
+    color: #2E1652;
+}
+
 .tabela-servicos{
     display: grid;
     grid-template-columns: 25% 30% 30%;
@@ -167,6 +171,10 @@ h3{
 
 .calculadora{
     margin-left: 50px;
+}
+
+.tituloCalc{
+    font-size: 18px; 
 }
 
 .teste{

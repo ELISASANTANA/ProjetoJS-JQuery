@@ -1,6 +1,5 @@
-
 body{
-    background: linear-gradient(180deg, #f3eedc 20%, #e0d29c 100%);
+    background-color: #F8F7EF;
 }
 
 /* estilização das imagens alternadas */
@@ -13,6 +12,7 @@ section{
     margin-left: 1%;
 }  
 
+
 h1{
     text-align: center;
     line-height: 2.2em;
@@ -22,32 +22,43 @@ h1{
 }
 
 .quemSomos{
-    line-height: 1.5em;
-    font-family: Roboto, sans-serif, Verdana;
+    line-height: 1.6em;
+    font-size: 18px;
     white-space:pre-wrap;
+    text-align: center;
 }
 
-    /* estilizção da da lista diferenciais */
-#diferenciais, p, li{
-    font-family: Roboto, sans-serif, Verdana;
+
+.diferenciais h4{
+    text-transform: uppercase;
+    color: #644378; 
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.diferenciais {
+    margin-bottom: 20px;
+}
+
+/* estilizção da da lista diferenciais */
+.diferenciais, .servicos, li{
     margin-left: 2%;
+    line-height: 2em;
+    font-size: 16px;
 } 
 
-b{
-    color: #c9b164;
-}
     /* conteúdo do texto que tem nas imgalternadas */
 .conteudoTexto{
     font-family: Open sans-serif;
     margin: 30px;
     margin-bottom: auto;
     margin-top: auto;
+    text-align: center;
 }
 
 .conteudoTexto p{
-    font-size: 20px;
+    font-size: 18px;
 }
-
 
 .conteudoTexto h3{
     font-weight: bold;
@@ -64,12 +75,9 @@ b{
     height: 100%;
 }
 
-#diferenciais span{
-    text-transform: uppercase;
-    color: #624378;
-    font-weight: bold;
+.diferenciais{
+    line-height: 2.2em;
 }
-
 
 .divfundadores{
     margin-top: 3%;
@@ -102,7 +110,7 @@ body{
     position: fixed;
     left: 0;
     bottom: 55%;
-    border: 2px solid, #c9b164;
+    border: 2px solid #c9b164;
     padding: 2%;
     color: #2e1652;
 }
@@ -118,6 +126,7 @@ body{
     flex-direction: column;
     text-align: center;
 }
+
 
 @media(max-width: 375px){
     .worker{
